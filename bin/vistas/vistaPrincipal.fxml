@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControladorJuego">
+   <children>
+      <TabPane prefHeight="492.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Configurar Juego">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="500.0">
+                     <children>
+                        <Text layoutX="133.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Preguntas y Respuestas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="50.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta" />
+                        <Text layoutX="42.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta 1" />
+                        <Text layoutX="42.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta 2" />
+                        <Text layoutX="42.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta 3" />
+                        <Text layoutX="42.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta 4" />
+                        <TextField fx:id="jtPregunta" layoutX="118.0" layoutY="53.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="jtRespuesta1" layoutX="118.0" layoutY="123.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="jtRespuesta2" layoutX="118.0" layoutY="157.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="jtRespuesta3" layoutX="118.0" layoutY="188.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="jtRespuesta4" layoutX="118.0" layoutY="219.0" prefHeight="25.0" prefWidth="293.0" />
+                        <Text layoutX="54.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" />
+                        <RadioButton fx:id="rbCategoria1" layoutX="118.0" layoutY="261.0" mnemonicParsing="false" onAction="#clic_Categoria" text="1">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="categoria" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbCategoria2" layoutX="156.0" layoutY="261.0" mnemonicParsing="false" onAction="#clic_Categoria" text="2" toggleGroup="$categoria" />
+                        <RadioButton fx:id="rbCategoria3" layoutX="195.0" layoutY="261.0" mnemonicParsing="false" onAction="#clic_Categoria" text="3" toggleGroup="$categoria" />
+                        <RadioButton fx:id="rbCategoria4" layoutX="236.0" layoutY="261.0" mnemonicParsing="false" onAction="#clic_Categoria" text="4" toggleGroup="$categoria" />
+                        <RadioButton fx:id="rbCategoria5" layoutX="280.0" layoutY="261.0" mnemonicParsing="false" onAction="#clic_Categoria" text="5" toggleGroup="$categoria" />
+                        <Text layoutX="410.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta correcta" textAlignment="CENTER" wrappingWidth="78.125">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="rbCorrecta1" layoutX="439.0" layoutY="127.0" mnemonicParsing="false" onAction="#clic_Correcta">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="correcta" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbCorrecta2" layoutX="439.0" layoutY="161.0" mnemonicParsing="false" onAction="#clic_Correcta" toggleGroup="$correcta" />
+                        <RadioButton fx:id="rbCorrecta3" layoutX="439.0" layoutY="192.0" mnemonicParsing="false" onAction="#clic_Correcta" toggleGroup="$correcta" />
+                        <RadioButton fx:id="rbCorrecta4" layoutX="439.0" layoutY="223.0" mnemonicParsing="false" onAction="#clic_Correcta" toggleGroup="$correcta" />
+                        <Button fx:id="btnGuardarPregunta" layoutX="203.0" layoutY="301.0" mnemonicParsing="false" onAction="#clic_btnGuardarPregunta" prefHeight="34.0" prefWidth="94.0" text="Guardar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Jugar">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="378.0" prefWidth="500.0">
+                     <children>
+                        <Text layoutX="142.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Jugador nuevo?">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="rbSi" layoutX="275.0" layoutY="31.0" mnemonicParsing="false" onAction="#clicSi" text="Si">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="nuevo" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbNo" layoutX="320.0" layoutY="31.0" mnemonicParsing="false" onAction="#clicNo" text="No" toggleGroup="$nuevo" />
+                        <Button fx:id="btnIniciar" layoutX="221.0" layoutY="56.0" mnemonicParsing="false" onAction="#clicIniciar" prefHeight="25.0" prefWidth="80.0" text="Iniciar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="14.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="314.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="jtNombreJugador" editable="false" layoutX="73.0" layoutY="95.0" prefHeight="25.0" prefWidth="207.0" />
+                        <TextField fx:id="jtIdJugador" editable="false" layoutX="337.0" layoutY="95.0" prefHeight="25.0" prefWidth="127.0" />
+                        <Text layoutX="145.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecciona la respuesta correcta">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="33.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nivel:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="282.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Puntaje:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="jtNivelJugador" editable="false" layoutX="73.0" layoutY="126.0" prefHeight="25.0" prefWidth="33.0" />
+                        <TextField fx:id="jtPuntajeJugador" editable="false" layoutX="337.0" layoutY="126.0" prefHeight="25.0" prefWidth="70.0" />
+                        <TextField fx:id="jtPreguntaRonda" editable="false" layoutX="76.0" layoutY="200.0" prefHeight="25.0" prefWidth="371.0" />
+                        <TextField fx:id="jtRespuesta1Ronda" editable="false" layoutX="103.0" layoutY="234.0" prefHeight="25.0" prefWidth="345.0" />
+                        <TextField fx:id="jtRespuesta2Ronda" editable="false" layoutX="103.0" layoutY="265.0" prefHeight="25.0" prefWidth="345.0" />
+                        <TextField fx:id="jtRespuesta3Ronda" editable="false" layoutX="103.0" layoutY="297.0" prefHeight="25.0" prefWidth="345.0" />
+                        <TextField fx:id="jtRespuesta4Ronda" editable="false" layoutX="103.0" layoutY="330.0" prefHeight="25.0" prefWidth="345.0" />
+                        <RadioButton fx:id="rbR1" layoutX="79.0" layoutY="238.0" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="seleccion" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbR2" layoutX="79.0" layoutY="269.0" mnemonicParsing="false" toggleGroup="$seleccion" />
+                        <RadioButton fx:id="rbR3" layoutX="79.0" layoutY="301.0" mnemonicParsing="false" toggleGroup="$seleccion" />
+                        <RadioButton fx:id="rbR4" layoutX="79.0" layoutY="334.0" mnemonicParsing="false" toggleGroup="$seleccion" />
+                        <Button fx:id="btnEnviar" layoutX="114.0" layoutY="377.0" mnemonicParsing="false" onAction="#clic_btnEnviarRespuesta" prefHeight="39.0" prefWidth="126.0" text="Enviar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnRetirarse" layoutX="251.0" layoutY="377.0" mnemonicParsing="false" onAction="#clic_btnRetirarse" prefHeight="39.0" prefWidth="126.0" text="Retirarme">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

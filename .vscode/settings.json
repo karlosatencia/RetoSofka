@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.base.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.controls.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.fxml.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.graphics.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.media.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.swing.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx.web.jar",
+        "c:\\INSTALADORES\\openjfx-11.0.2\\javafx-sdk-11.0.2\\lib\\javafx-swt.jar",
+        "c:\\Users\\karlo\\Documents\\UNINORTE\\Programacion\\INSTALADORES\\sqlite-jdbc-3.36.0.1.jar"
+    ]
+}
